@@ -1,0 +1,365 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  max-width: 1286px;
+}
+
+/* Main Section________________________________________ */
+#main {
+  background: linear-gradient(114deg, rgb(241 212 240) 15%, rgba(216, 219, 254, 1) 100%);
+  padding: 1px;
+  min-height: 100vh;
+}
+
+/* Nav Section________________________________________ */
+#main .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 14px 0;
+  align-items: center;
+}
+
+.nav .pageName h3 {
+  font-weight: 700;
+}
+
+.nav .userIcon i {
+  font-size: xx-large;
+  padding: 10px;
+  background: white;
+  border-radius: 10%;
+}
+
+/* TaskPage Section________________________________________ */
+#main .taskPage {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.taskPage .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.taskPage .sort {
+  margin-bottom: 16px;
+}
+
+.taskPage .filter .add {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter .add .taskName label,
+.taskPage .sort label {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.filter .add .taskName input,
+.taskPage .sort select {
+  border: none;
+}
+
+.filter .add select {
+  border: none;
+  width: 130px;
+}
+
+.filter button {
+  padding: 10px 60px;
+  border-radius: 4px;
+  font-weight: 700;
+  border: none;
+  background-color: #25689c;
+  color: white;
+}
+
+.filter .add select,
+.filter .add select option,
+.filter .add .taskName input,
+.taskPage .sort select {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: white;
+  font-size: large;
+}
+
+.filter .add select:focus,
+.filter .add .taskName input:focus,
+.taskPage .sort select:focus,
+.popUp .AddingForm .title input:focus,
+.popUp .AddingForm .desc textarea:focus,
+.popUp .AddingForm .team input:focus,
+.popUp .AddingForm .assignees input:focus,
+.popUp .AddingForm .priority select:focus,
+.popUp .AddingForm .status select:focus {
+  outline: none;
+}
+
+/* PopUp AddFrom Styling________________________________________ */
+.popUp {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  opacity: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.popUp .AddingForm {
+  width: 455px;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+.popUp .AddingForm button {
+  background-color: #25689c;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: x-large;
+  margin: 0 0px 0 354px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.popUp .AddingForm button:hover {
+  transform: rotate(44deg);
+}
+
+.popUp .heading {
+  background: white;
+  padding: 10px 20px;
+  width: 455px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popUp .heading button {
+  border: none;
+  background-color: transparent;
+}
+
+.popUp .AddingForm .title,
+.popUp .AddingForm .desc,
+.popUp .AddingForm .team,
+.popUp .AddingForm .assignees,
+.popUp .AddingForm .priority,
+.popUp .AddingForm .status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popUp .AddingForm .title label,
+.popUp .AddingForm .desc label,
+.popUp .AddingForm .team label,
+.popUp .AddingForm .assignees label,
+.popUp .AddingForm .priority label,
+.popUp .AddingForm .status label {
+  font-size: larger;
+}
+
+.popUp .AddingForm .title input,
+.popUp .AddingForm .desc textarea,
+.popUp .AddingForm .team input,
+.popUp .AddingForm .assignees input,
+.popUp .AddingForm .priority select,
+.popUp .AddingForm .status select {
+  width: 300px;
+  font-size: large;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+/* AllTask Section________________________________________-- */
+.taskPage .allTask {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.taskPage .allTask .pending,
+.taskPage .allTask .inProgress,
+.taskPage .allTask .completed,
+.taskPage .allTask .deployed,
+.taskPage .allTask .deferred {
+  width: 248px;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.taskPage .allTask .pending .pendingData .box,
+.taskPage .allTask .inProgress .progressData .box,
+.taskPage .allTask .completed .completedData .box,
+.taskPage .allTask .deployed .deployedData .box,
+.taskPage .allTask .deferred .deferredData .box {
+  background: #f3f1f2;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.pending .pendingData .box .head,
+.inProgress .progressData .box .head,
+.completed .completedData .box .head,
+.deployed .deployedData .box .head,
+.deferred .deferredData .box .head {
+  border-bottom: 2px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px;
+}
+
+.pendingData .box .head p,
+.progressData .box .head p,
+.completedData .box .head p,
+.deployedData .box .head p,
+.deferredData .box .head p {
+  padding: 6px;
+  color: white;
+  background-color: #25689c;
+}
+
+.pending .pendingData .box p,
+.inProgress .progressData .box p,
+.completed .completedData .box p,
+.deployed .deployedData .box p,
+.deferred .deferredData .box p {
+  line-height: 1.3;
+  margin: 4px;
+}
+
+.pendingData .box .editNdelete,
+.progressData .box .editNdelete,
+.completedData .box .editNdelete,
+.deployedData .box .editNdelete,
+.deferredData .box .editNdelete {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 4px;
+}
+
+.pendingData .box .editNdelete button,
+.progressData .box .editNdelete button,
+.completedData .box .editNdelete button,
+.deployedData .box .editNdelete button,
+.deferredData .box .editNdelete button {
+  background-color: #25689c;
+  border-radius: 4px;
+  border: none;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.editNdelete .dropdown .dropdown-menu {
+  height: 70px;
+}
+
+.editNdelete .dropdown .dropdown-menu .edit,
+.editNdelete .dropdown .dropdown-menu .delete {
+  width: 100%;
+  height: 35px;
+  background-color: #d9d9d9;
+}
+
+.editNdelete .dropdown .dropdown-menu .edit:hover,
+.editNdelete .dropdown .dropdown-menu .delete:hover {
+  background-color: #8c8b90;
+}
+
+.pendingData .box .editNdelete button .dot,
+.progressData .box .editNdelete button .dot,
+.completedData .box .editNdelete button .dot,
+.deployedData .box .editNdelete button .dot,
+.deferredData .box .editNdelete button .dot {
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2px 0;
+}
+
+.taskPage .allTask .pending .heading,
+.taskPage .allTask .inProgress .heading,
+.taskPage .allTask .completed .heading,
+.taskPage .allTask .deployed .heading,
+.taskPage .allTask .deferred .heading {
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.taskPage .allTask .pending .heading {
+  background-color: #8c8b90;
+}
+
+.taskPage .allTask .inProgress .heading {
+  background-color: #e89922;
+}
+
+.taskPage .allTask .completed .heading {
+  background-color: #42a81e;
+}
+
+.taskPage .allTask .deployed .heading {
+  background-color: #353976;
+}
+
+.taskPage .allTask .deferred .heading {
+  background-color: #f68871;
+}
+
+@media only screen and (max-width:754px) {
+  .filter button {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width:658px) {
+  .taskPage .filter .add {
+    flex-direction: column
+  }
+}
+
+@media only screen and (max-width:520px) {
+  .taskPage .filter {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .filter button {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width:390px) {
+
+  .filter .add select,
+  .filter .add .taskName label {
+    margin: 10px;
+  }
+
+  .taskPage .filter .add {
+    align-items: flex-start;
+  }
+
+}
